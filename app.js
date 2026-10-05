@@ -18,5 +18,3 @@ console.log("Tamaño final de la lista: " + listaDeSuper.length);
 
 console.log("--- Lista de compras final ---");
 listaDeSuper.forEach(producto => console.log("- " + producto));
-
-console.log("Prueba de Git");
