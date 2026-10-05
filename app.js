@@ -1,16 +1,20 @@
-// 1. Instanciar un arreglo vacío guardado en la variable listaDeSuper
 let listaDeSuper = [];
+listaDeSuper[0] = "Leche";
+listaDeSuper[1] = "Huevos";
+listaDeSuper[2] = "Pan";
 
-// 2. Agregar 3 productos a la lista asignándolos directamente por índice
-listaDeSuper[0] = "sal";
-listaDeSuper[1] = "fideos";
-listaDeSuper[2] = "tomate";
+listaDeSuper.push("Arroz", "Galletitas");
+listaDeSuper.unshift("Aceite", "Fideos");
 
-// 3. Imprimir en consola el primer elemento
-console.log(listaDeSuper[0]);
+console.log("Cantidad total actual: " + listaDeSuper.length);
 
-// 4. Crear la variable ultimoElemento que calcule la posición del último producto mediante length - 1
-let ultimoElemento = listaDeSuper.length - 1;
+let noHabia = listaDeSuper.pop();
+console.log("Producto no encontrado: " + noHabia);
 
-// 5. Acceder al último elemento usando la variable ultimoElemento e imprimirlo por consola
-console.log(listaDeSuper[ultimoElemento])
+let comprado = listaDeSuper.shift();
+console.log("Producto comprado: " + comprado);
+
+console.log("Tamaño final de la lista: " + listaDeSuper.length);
+
+console.log("--- Lista de compras final ---");
+listaDeSuper.forEach(producto => console.log("- " + producto));
